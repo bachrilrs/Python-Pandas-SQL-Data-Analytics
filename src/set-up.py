@@ -135,8 +135,9 @@ if __name__ == '__main__':
 
     placeholders = ', '.join(["?"]*len(table_cols))
     sql = f"INSERT INTO ventes ({', '.join(table_cols)}) VALUES ({placeholders})"
-    # print(sql)
-    # print(sql)
+    
+
+
 
     cur.executemany(sql, rows) #a faire une fois 
     con.commit()
